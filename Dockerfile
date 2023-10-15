@@ -4,8 +4,17 @@ FROM python:3.9-slim
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements.txt file into the container
+# Copy the requirements file into the container
 COPY requirements.txt .
+
+# Install the venv package
+RUN python -m venv /venv
+
+# Activate the virtual environment
+ENV PATH="/venv/bin:$PATH"
+
+# Upgrade pip
+RUN pip install --no-cache-dir --upgrade pip
 
 # Install the project dependencies
 RUN pip install --no-cache-dir -r requirements.txt
