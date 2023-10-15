@@ -11,13 +11,13 @@ COPY requirements.txt .
 RUN python -m venv /venv
 
 # Activate the virtual environment
-#ENV PATH="/venv/bin:$PATH"
+ENV PATH="/venv/bin:$PATH"
 
 # Upgrade pip
 RUN pip install --upgrade pip
 
 # Install the project dependencies
-#RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt
 
 # Copy the rest of the application code into the container
 COPY . .
