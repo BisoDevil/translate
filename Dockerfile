@@ -17,7 +17,7 @@ ENV PATH="/venv/bin:$PATH"
 RUN pip install --upgrade pip
 
 # Install the project dependencies
-RUN pip install -r requirements.txt
+#RUN pip install -r requirements.txt
 
 # Copy the rest of the application code into the container
 COPY . .
