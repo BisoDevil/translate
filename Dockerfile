@@ -11,7 +11,7 @@ COPY requirements.txt .
 RUN python -m venv /venv
 
 # Activate the virtual environment
-ENV PATH="/venv/bin:$PATH"
+#ENV PATH="/venv/bin:$PATH"
 
 # Upgrade pip
 RUN pip install --upgrade pip
@@ -26,4 +26,4 @@ COPY . .
 EXPOSE 8000
 
 # Start the FastAPI application
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "9999"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "1338"]
