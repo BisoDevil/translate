@@ -3,4 +3,5 @@ pytorch-transformers==1.2.0
 tensorflow==2.14.0
 torch==2.1.0
 transformers==4.34.0
+uvicorn
 
